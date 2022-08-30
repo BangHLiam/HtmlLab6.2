@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab7_2</title>
+
+    <script>
+        function Check(){
+
+            let One = document.getElementById("Tung")
+            let First = One.value;
+
+            let Two = document.getElementById("Plus")
+            let Second = Two.value;
+            let C = document.getElementById("Option")
+            let Ch = C.value;
+            if(Ch == '+'){
+                Cal = parseInt(First) + parseInt(Second);
+                
+            }
+            else if(Ch == '-'){
+                Cal = parseInt(First) - parseInt(Second);
+                
+            }
+            else if(Ch == '*'){
+                Cal = parseInt(First) * parseInt(Second);
+                
+            }
+            else if(Ch == '/'){
+                Cal = parseInt(First) / parseInt(Second);
+                
+            }
+
+            Result.value = Cal;
+            
+        }
+
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="Tung">
+        <select id="Option">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        <input type="number" id="Plus">
+        <label for=""> = </label>
+        <input type="text" id="Result" disabled>
+        <input type="button" value="Complete" onclick="Check()" >
+    </form>
+</body>
+</html>
